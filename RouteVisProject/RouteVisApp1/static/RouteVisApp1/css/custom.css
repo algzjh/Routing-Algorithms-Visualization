@@ -1,0 +1,60 @@
+html, body{
+    height: 100%;
+}
+
+header{
+    height: 10%;
+    padding-left: 20px;
+}
+
+#main-display-area{
+    height: 85%;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#parameter-setting{
+    height: 10%;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-left: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#ouput-area{
+    height: 80%;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-left: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#graph-area{
+    padding-left: 0px;
+    padding-right: 0px;
+    border-right: 1px solid black;
+}
+
+
+#detail-area{
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+#animation-control{
+    height: 10%;
+    width: 100%;
+    padding-left: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+footer{
+    height: 5%;
+    padding-left: 20px;
+}

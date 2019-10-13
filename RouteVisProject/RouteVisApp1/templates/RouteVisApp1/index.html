@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'RouteVisApp1/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'RouteVisApp1/css/flat-ui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'RouteVisApp1/css/custom.css' %}">
+    <title>RouteVis</title>
+    <!-- http://127.0.0.1:8000/RouteVisApp1/ -->
+
+</head>
+<body>
+    <header>
+        <h3>Routing Algorithms Visualization</h3>
+    </header>
+
+    <div id="main-display-area" class="container-fluid">
+
+        <div id="parameter-setting" class="row">
+            <div class="col-2">
+                <button class="btn btn-primary" onclick="onClickGenerateGraph()">
+                    Generate Graph
+                </button>
+            </div>
+
+            <div class="col-2">
+                <label>Start</label>
+                <input id="start-node" type="text" value placeholder="Start" class="form-control">
+            </div>
+
+            <div class="col-2">
+                <label>End</label>
+                <input id="end-node" type="text" value placeholder="End" class="form-control">
+            </div>
+
+            <div class="col-6">
+                <label>Algorithms Selection</label>
+                <br/>
+                <select class="form-control select select-primary">
+                    <option value="0">Dijkstra</option>
+                    <option value="1">Ford</option>
+                    <option value="2">ARPAnet</option>
+                </select>
+            </div>
+
+            <!--
+            <div class="col-8">
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        Large button
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>Dijkstra</li>
+                        <li>Ford</li>
+                        <li>ARPAnet</li>
+                    </ul>
+                </div>
+            </div>
+            -->
+
+            <!--
+            <form role="form" class="form-inline">
+                <label>Start</label>
+                <input tex="text" value placeholder="Start" class="form-control">
+                <label>End</label>
+                <input tex="text" value placeholder="End" class="form-control">
+                <label> algorithms selection </label>
+                <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">
+                    "Algorithms"
+                </button>
+                <button type="button" class="btn btn-primary"> GO </button>
+            </form>
+            -->
+        </div>
+
+        <!-- -->
+
+        <div id="ouput-area" class="row">
+
+            <div id="graph-area" class="col-9">
+
+            </div>
+
+            <div id="detail-area" class="col-3">
+                detail
+            </div>
+        </div>
+
+        <!-- -->
+
+        <div id="animation-control" class="row">
+            <div class="col">
+                slider
+            </div>
+
+            <div class="col">
+                <!--  <span class="fui-arrow-left"></span> -->
+                <span class="fui-play"></span>
+                <span>/</span>
+                <span class="fui-pause"></span>
+                <!-- <span class="fui-arrow-right"></span>  -->
+            </div>
+
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 40%;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <footer>
+        <p>Assignments for the Distributed System Course</p>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'RouteVisApp1/js/jquery-3.4.1.js' %}"></script>
+    <!-- bootstrap.bundle.js include Popper, but not jQuery -->
+    <script src="{% static 'RouteVisApp1/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'RouteVisApp1/js/d3.js' %}"></script>
+    <script> token = "{{ csrf_token }}"; </script>
+    <script src="{% static 'RouteVisApp1/js/variable.js' %}"></script>
+    <script src="{% static 'RouteVisApp1/js/graph.js' %}"></script>
+    <!-- <script src="https://kit.fontawesome.com/0701cca6d3.js" crossorigin="anonymous"></script> -->
+    <!--  <script src="{% static 'RouteVisApp1/js/application.js' %}"></script> -->
+    <!--
+    <script src="{% static 'RouteVisApp1/js/flat-ui.js' %}"></script>
+    <script>
+        var $slider = $("#slider");
+        if ($slider.length > 0) {
+          $slider.slider({
+            min: 1,
+            max: 10,
+            value: 1,
+            orientation: "horizontal",
+            range: "min"
+          }).addSliderSegments($slider.slider("option").max);
+        }
+    </script>
+    -->
+</body>
+</html>
