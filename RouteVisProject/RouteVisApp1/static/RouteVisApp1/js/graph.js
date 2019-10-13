@@ -52,14 +52,33 @@ function onClickGenerateGraph(){
                     .force("charge", d3.forceManyBody().strength(-4000))
                     .force("center", d3.forceCenter(width/2, height/2));
 
-                var link = svg.append("g")
-                    .attr("class", "links")
-                    .selectAll("line")
+                // var link = svg.append("g")
+                //     .attr("class", "links")
+                //     .selectAll("line")
+                //     .data(graph_data.links)
+                //     .enter()
+                //     .append("line")
+                //     .attr("stroke-width", 2)
+                //     .style("stroke", "#aaa");
+
+                var link = svg.selectAll(".link")
                     .data(graph_data.links)
                     .enter()
+                    .append("g")
+                    .attr("class", "link")
                     .append("line")
-                    .attr("stroke-width", 2)
+                    .attr("class", "link-line")
+                    .attr("stroke-width", 4)
                     .style("stroke", "#aaa");
+
+
+                var linkText = svg.selectAll(".link")
+                    .append("text")
+                    .attr("class", "link-label")
+                    .attr("fill", "Black")
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", "middle")
+                    .text(function(d) {return d.weight;});
 
                 var node = svg.append("g")
                     .attr("class", "nodes")
@@ -101,6 +120,14 @@ function onClickGenerateGraph(){
                     node
                         .attr("transform", function(d){
                             return "translate(" + d.x + "," + d.y + ")";
+                        });
+
+                    linkText
+                        .attr("x", function(d){
+                            return ((d.source.x + d.target.x)/2);
+                        })
+                        .attr("y", function(d){
+                            return ((d.source.y + d.target.y)/2);
                         })
                 }
 
@@ -121,92 +148,6 @@ function onClickGenerateGraph(){
                   d.fy = null;
                 }
 
-                /*
-                var link = svg
-                    .append("g")
-                    .attr("class", "links")
-                    .selectAll("line")
-                    .data(graph_data.links)
-                    .enter()
-                    .append("line")
-                    .attr("stroke-width", 2)
-                    .style("stroke", "#aaa");
-
-                var node = svg.append("g")
-                    .attr("class", "nodes")
-                    .selectAll("g")
-                    .data(graph_data.nodes)
-                    .enter()
-                    .append("g");
-
-                var circles = node.append("circle")
-                    .attr("r", 20)
-                    .style("fill", "#69b3a2");
-
-                var labels = node.append("text")
-                    .text(function(d) {return d.name;})
-                    .attr("x", 6)
-                    .attr("y", 3);
-
-                node.append("title")
-                    .text(function(d) {return d.id;});
-
-
-                var simulation = d3.forceSimulation(graph_data.nodes)
-                    .force("links", d3.forceLink()
-                            .distance(function(d) { return d.weight; })
-                            .id(function(d) { return d.id; })
-                            .links(graph_data.links)
-                    )
-                    .force("charge", d3.forceManyBody().strength(-4000))
-                    .force("center", d3.forceCenter(width/2, height/2))
-                    .alphaDecay(0.2)
-                    .on("end", ticked);
-
-                function ticked() {
-                    link
-                        .attr("x1", function(d) { return d.source.x; })
-                        .attr("y1", function(d) { return d.source.y; })
-                        .attr("x2", function(d) { return d.target.x; })
-                        .attr("y2", function(d) { return d.target.y; });
-
-                    node
-                        .attr("cx", function(d) { return d.x+6; })
-                        .attr("cy", function(d) { return d.y-6; });
-                }
-                 */
-
-                /*
-                force.nodes(graph_data.nodes)
-                    .links(graph_data.links)z`
-                    .size([w, h])
-                    .linkDistance([50])
-                    .charge([-100])
-                    .start();
-                var edges = svg.selectAll("line")
-                    .data(graph_data.links)
-                    .enter()
-                    .append("line")
-                    .style("stroke", "#ccc")
-                    .style("stroke-width", 1);
-                var nodes = svg.selectAll("circle")
-                    .data(graph_data.nodes)
-                    .enter()
-                    .append("circle")
-                    .attr("r", 10)
-                    .style("fill", function(d, i){
-                        return colors(i);
-                    })
-                    .call(force.drag);
-                force.on("tick", function(){
-                    edges.attr("x1", function(d) {return d.source.x;})
-                        .attr("y1", function(d) {return d.source.y;})
-                        .attr("x2", function(d) {return d.target.x;})
-                        .attr("y2", function(d) {return d.target.y;})
-                    nodes.attr("cx", function(d) {return d.x;})
-                        .attr("cy", function(d) {return d.y;})
-                })
-                 */
             },
             error: function (data) {
                 alert("ajax Exception!!!");
