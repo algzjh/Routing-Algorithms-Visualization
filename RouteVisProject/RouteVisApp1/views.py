@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.conf import settings
 import json
 import os
+from .dijkstra import getDijkstra
 
 
 def read_json_file(filename):
@@ -24,22 +25,36 @@ def index(request):
     # status：HTTP状态码，默认为200
     # using：设置HTML模板转换生成HTML网页的模板引擎
     if request.method == 'POST':
-        if request.is_ajax() and request.POST['id'] == 'requestPlot':
-            temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
-            filename = os.path.join(settings.BASE_DIR, temp_path)
-            graph_data = read_json_file(filename)
-            start_node = request.POST["start_node"]
-            end_node = request.POST["end_node"]
-            alg_name = request.POST["alg_name"]
-            if alg_name == "0":
-                print("Yes!!")
-            result = {
-                "start_node": start_node,
-                "end_node": end_node,
-                "alg_name": alg_name,
-                "graph_data": graph_data
-            }
-            print("result: \n", result)
-            return HttpResponse(json.dumps(result))
+        if request.is_ajax():
+            if request.POST['id'] == 'requestPlot':
+                temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
+                filename = os.path.join(settings.BASE_DIR, temp_path)
+                graph_data = read_json_file(filename)
+                start_node = request.POST["start_node"]
+                end_node = request.POST["end_node"]
+                alg_name = request.POST["alg_name"]
+                result = {
+                    "start_node": start_node,
+                    "end_node": end_node,
+                    "alg_name": alg_name,
+                    "graph_data": graph_data
+                }
+                print("result: \n", result)
+                return HttpResponse(json.dumps(result))
+            elif request.POST['id'] == 'requestAlg':
+                temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
+                filename = os.path.join(settings.BASE_DIR, temp_path)
+                graph_data = read_json_file(filename)
+                start_node = request.POST["start_node"]
+                end_node = request.POST["end_node"]
+                alg_name = request.POST["alg_name"]
+                if alg_name == "0":
+                    alg_result, add_list = getDijkstra(graph_data, start_node, end_node)
+                    result = {
+                        "alg_result": alg_result,
+                        "add_list": add_list
+                    }
+                    print("dij-result: \n", result)
+                    return HttpResponse(json.dumps(result))
         return HttpResponse(json.dumps({"message": "error"}))
     return render(request, 'RouteVisApp1/index.html')

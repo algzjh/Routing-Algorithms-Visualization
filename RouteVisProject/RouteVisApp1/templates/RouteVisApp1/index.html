@@ -17,6 +17,8 @@
         <h3>Routing Algorithms Visualization</h3>
     </header>
 
+    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+
     <div id="main-display-area" class="container-fluid">
 
         <div id="parameter-setting" class="row">
@@ -84,9 +86,12 @@
 
             </div>
 
-            <div id="detail-area" class="col-3">
-                detail
+
+            <div id="detail-area" class="col-3" style="overflow-x:auto;">
+                <p>Detail</p>
             </div>
+
+
         </div>
 
         <!-- -->
@@ -98,9 +103,18 @@
 
             <div class="col">
                 <!--  <span class="fui-arrow-left"></span> -->
-                <span class="fui-play" onclick="onClickPlayOrPause()"></span>
+
+                <button type="button" class="btn-primary">
+                    <span class="fui-arrow-left"></span>
+                </button>
+
+                <span id="playorpause" class="fui-play" onclick="onClickPlayOrPause()"></span>
                 <span>/</span>
                 <span class="fui-pause"></span>
+
+                <button id="step-forward-btn" type="button" class="btn-primary" onclick="onClickForward()">
+                    <span class="fui-arrow-right"></span>
+                </button>
                 <!-- <span class="fui-arrow-right"></span>  -->
             </div>
 
