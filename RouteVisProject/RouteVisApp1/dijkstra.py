@@ -1,41 +1,61 @@
 # Library for INT_MAX
 import sys
+import json
+from copy import deepcopy
 
-class Graph():
 
-    def __init__(self, vertices):
-        self.V = vertices
-        self.graph = [[0 for column in range(vertices)]
-                      for row in range(vertices)]
+def read_json_file(filename):
+    with open(filename, encoding='utf-8') as file:
+        return json.load(file)
 
-    def printSolution(self, dist):
-        print("Vertex tDistance from Source")
-        for node in range(self.V):
-            print(node, "t", dist[node])
 
-    def minDistance(self, dist, sptSet):
+def getDijkstra(graph_data, start_node, end_node):
+    result = {}
+    add_list = []
+    nodes = graph_data["nodes"]
+    links = graph_data["links"]
+    nodes_tot = len(nodes)
+    cost_matrix = [[sys.maxsize for i in range(nodes_tot + 1)] for j in range(nodes_tot + 1)]
+    dist = [sys.maxsize for i in range(nodes_tot + 1)]
+    vis = [False for i in range(nodes_tot + 1)]
+    for item in links:
+        u = item["source"]
+        v = item["target"]
+        w = item["weight"]
+        if cost_matrix[u][v] > w:
+            cost_matrix[u][v] = cost_matrix[v][u] = w
+    dist[int(start_node)] = 0
+    round = 0
+    result[round] = deepcopy(dist)
+    while True:
+        round += 1
+        k = -1
         mi = sys.maxsize
-        for v in range(self.V):
-            if dist[v] < mi and sptSet[v] == False:
-                mi = dist[v]
-                min_index = v
-        return min_index
-
-    def dijkstra(self, src):
-        dist = [sys.maxsize] * self.V
-        dist[src] = 0
-        sptSet = [False] * self.V
-
-        for cout in range(self.V):
-            u = self.minDistance(dist, sptSet)
-            sptSet[u] = True
-            for v in range(self.V):
-                if self.graph[u][v] > 0 and sptSet[v] == False and dist[v] > dist[u] + self.graph[u][v]:
-                    dist[v] = dist[u] + self.graph[u][v]
-        self.printSolution(dist)
+        for i in range(1, nodes_tot+1):
+            if vis[i] is False and dist[i] < mi:
+                mi = dist[i]
+                k = i
+        if k == -1:
+            break
+        add_list.append(k)
+        vis[k] = True
+        for i in range(1, nodes_tot + 1):
+            if vis[i] is False and dist[k] + cost_matrix[k][i] < dist[i]:
+                dist[i] = dist[k] + cost_matrix[k][i]
+        result[round] = deepcopy(dist)
+    return result, add_list
 
 
 if __name__ == "__main__":
+    filename = "./static/RouteVisApp1/data/example-graph.json"
+    graph_data = read_json_file(filename)
+    print(graph_data)
+    start_node = "5"
+    end_node = "1"
+    result, add_list = getDijkstra(graph_data, start_node, end_node)
+    print("result: \n", result)
+    print("add_list: \n", add_list)
+    """
     g = Graph(9)
     g.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
                [4, 0, 8, 0, 0, 0, 0, 11, 0],
@@ -48,3 +68,4 @@ if __name__ == "__main__":
                [0, 0, 2, 0, 0, 0, 6, 7, 0]
                ]
     g.dijkstra(0)
+    """

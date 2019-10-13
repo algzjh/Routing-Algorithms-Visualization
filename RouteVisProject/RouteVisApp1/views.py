@@ -30,9 +30,13 @@ def index(request):
             graph_data = read_json_file(filename)
             start_node = request.POST["start_node"]
             end_node = request.POST["end_node"]
+            alg_name = request.POST["alg_name"]
+            if alg_name == "0":
+                print("Yes!!")
             result = {
                 "start_node": start_node,
                 "end_node": end_node,
+                "alg_name": alg_name,
                 "graph_data": graph_data
             }
             print("result: \n", result)

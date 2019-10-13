@@ -21,7 +21,7 @@
 
         <div id="parameter-setting" class="row">
             <div class="col-2">
-                <button class="btn btn-primary" onclick="onClickGenerateGraph()">
+                <button id="generate-graph-btn" class="btn btn-primary" onclick="onClickGenerateGraph()">
                     Generate Graph
                 </button>
             </div>
@@ -39,7 +39,7 @@
             <div class="col-6">
                 <label>Algorithms Selection</label>
                 <br/>
-                <select class="form-control select select-primary">
+                <select id="algorithm-selector" class="form-control select select-primary">
                     <option value="0">Dijkstra</option>
                     <option value="1">Ford</option>
                     <option value="2">ARPAnet</option>
@@ -98,7 +98,7 @@
 
             <div class="col">
                 <!--  <span class="fui-arrow-left"></span> -->
-                <span class="fui-play"></span>
+                <span class="fui-play" onclick="onClickPlayOrPause()"></span>
                 <span>/</span>
                 <span class="fui-pause"></span>
                 <!-- <span class="fui-arrow-right"></span>  -->
@@ -126,6 +126,7 @@
     <script> token = "{{ csrf_token }}"; </script>
     <script src="{% static 'RouteVisApp1/js/variable.js' %}"></script>
     <script src="{% static 'RouteVisApp1/js/graph.js' %}"></script>
+    <script src="{% static 'RouteVisApp1/js/animation.js' %}"></script>
     <!-- <script src="https://kit.fontawesome.com/0701cca6d3.js" crossorigin="anonymous"></script> -->
     <!--  <script src="{% static 'RouteVisApp1/js/application.js' %}"></script> -->
     <!--

@@ -25,6 +25,10 @@ header{
     margin-right: 0px;
 }
 
+#generate-graph-btn{
+    margin-top: 20px;
+}
+
 #ouput-area{
     height: 80%;
     width: 100%;
