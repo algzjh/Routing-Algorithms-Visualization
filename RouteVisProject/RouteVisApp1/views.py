@@ -4,6 +4,7 @@ from django.conf import settings
 import json
 import os
 from .dijkstra import getDijkstra
+from random import randrange
 
 
 def read_json_file(filename):
@@ -27,7 +28,12 @@ def index(request):
     if request.method == 'POST':
         if request.is_ajax():
             if request.POST['id'] == 'requestPlot':
-                temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
+                data_source_name = request.POST["data_source_name"]
+                print("data_source_name: \n", data_source_name)
+                if data_source_name == "1":
+                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/graph1.json"
+                else:
+                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
                 filename = os.path.join(settings.BASE_DIR, temp_path)
                 graph_data = read_json_file(filename)
                 start_node = request.POST["start_node"]
@@ -42,7 +48,12 @@ def index(request):
                 print("result: \n", result)
                 return HttpResponse(json.dumps(result))
             elif request.POST['id'] == 'requestAlg':
-                temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
+                data_source_name = request.POST["data_source_name"]
+                print("data_source_name: \n", data_source_name)
+                if data_source_name == "1":
+                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/graph1.json"
+                else:
+                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
                 filename = os.path.join(settings.BASE_DIR, temp_path)
                 graph_data = read_json_file(filename)
                 start_node = request.POST["start_node"]

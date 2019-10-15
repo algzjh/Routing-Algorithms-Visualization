@@ -13,8 +13,8 @@
 
 </head>
 <body>
-    <header>
-        <h3>Routing Algorithms Visualization</h3>
+    <header style="padding-top: 5px;">
+        <h3 style="margin-top: 35px; margin-bottom: 0px;">Routing Algorithms Visualization</h3>
     </header>
 
     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -22,26 +22,47 @@
     <div id="main-display-area" class="container-fluid">
 
         <div id="parameter-setting" class="row">
+
             <div class="col-2">
+                <p>Data Source</p>
+                <select id="data-source-selector" class="form-control select select-primary" style="border: 2px solid #bdc3c7">
+                    <option value="0">Book Example</option>
+                    <option value="1">Random</option>
+                </select>
+            </div>
+
+            <div class="col-1">
                 <button id="generate-graph-btn" class="btn btn-primary" onclick="onClickGenerateGraph()">
                     Generate Graph
                 </button>
             </div>
 
-            <div class="col-2">
-                <label>Start</label>
+            <div class="col-1">
+                <p style="margin-bottom: 10px">Start</p>
                 <input id="start-node" type="text" value placeholder="Start" class="form-control">
             </div>
 
-            <div class="col-2">
-                <label>End</label>
+            <div class="col-1">
+                <p style="margin-bottom: 10px">End</p>
                 <input id="end-node" type="text" value placeholder="End" class="form-control">
             </div>
 
-            <div class="col-6">
-                <label>Algorithms Selection</label>
-                <br/>
-                <select id="algorithm-selector" class="form-control select select-primary">
+            <div class="col-7">
+                <p>Algorithms Selection</p>
+                <!--
+                <div class="select2-container form-control select select-primary" id="s2id_autogen1">
+                    <a href="javascript:void(0)" class="select2-choice" tabindex="-1">
+                        <span class="select2-chosen">Dijkstra</span>
+                        <abbr class="select2-search-choice-close"></abbr>
+                        <span class="select2-arrow" role="presentation">
+                            <b role="presentation"></b>
+                        </span>
+                    </a>
+                    <label for="s2id_autogen2" class="select2-offscreen"></label>
+                    <input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2">
+                </div>
+                -->
+                <select id="algorithm-selector" class="form-control select select-primary" style="border: 2px solid #bdc3c7">
                     <option value="0">Dijkstra</option>
                     <option value="1">Ford</option>
                     <option value="2">ARPAnet</option>
@@ -97,20 +118,20 @@
         <!-- -->
 
         <div id="animation-control" class="row">
-            <div class="col">
-                slider
+            <div class="col-4">
+
             </div>
 
-            <div class="col">
+            <div id="control-paly-pause" class="col-2">
                 <!--  <span class="fui-arrow-left"></span> -->
 
                 <button type="button" class="btn-primary">
                     <span class="fui-arrow-left"></span>
                 </button>
 
-                <span id="playorpause" class="fui-play" onclick="onClickPlayOrPause()"></span>
-                <span>/</span>
-                <span class="fui-pause"></span>
+                <span id="playorpause" class="fui-play" onclick="onClickPlayOrPause()" style="display:none"></span>
+
+                <span class="fui-pause" style="display:none"></span>
 
                 <button id="step-forward-btn" type="button" class="btn-primary" onclick="onClickForward()">
                     <span class="fui-arrow-right"></span>
@@ -118,10 +139,14 @@
                 <!-- <span class="fui-arrow-right"></span>  -->
             </div>
 
-            <div class="col">
+            <div id="progress-control" class="col-3">
                 <div class="progress">
-                    <div class="progress-bar" style="width: 40%;"></div>
+                    <div id="animation-progress-bar" class="progress-bar" style="width: 0%;"></div>
                 </div>
+            </div>
+
+            <div class="col-3">
+
             </div>
         </div>
 
@@ -129,7 +154,7 @@
     <!-- /container -->
 
     <footer>
-        <p>Assignments for the Distributed System Course</p>
+        <p style="padding-top: 15px">Assignments for the Distributed System Course</p>
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

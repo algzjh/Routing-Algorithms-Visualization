@@ -10,12 +10,14 @@ function onClickForward(){
         let start_node = document.getElementById("start-node").value;
         let end_node = document.getElementById("end-node").value;
         let alg_name = document.getElementById("algorithm-selector").value;
+        let data_source_name = document.getElementById("data-source-selector").value;
         var formdata = new FormData();
         formdata.append("id", "requestAlg");
         formdata.append("csrfmiddlewaretoken", token);
         formdata.append("start_node", start_node);
         formdata.append("end_node", end_node);
         formdata.append("alg_name", alg_name);
+        formdata.append("data_source_name", data_source_name);
 
         $.ajaxSetup({
             data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
@@ -65,6 +67,11 @@ function onClickForward(){
                 console.log("node_id: ", node_id);
                 d3.select(node_id)
                     .attr("fill", "#ff7f0c");
+
+                let ratio = (current_animation_step + 1) / add_list.length * 100;
+                d3.select("#animation-progress-bar")
+                    .attr("style", "width: " + ratio + "%;");
+
                 current_animation_step += 1;
                 console.log("current dist: \n", alg_result[current_animation_step]);
             },
@@ -94,6 +101,10 @@ function onClickForward(){
                 .enter()
                 .append("td")
                 .text(function(d) {return d;});
+
+            let ratio = (current_animation_step + 1) / add_list.length * 100;
+            d3.select("#animation-progress-bar")
+                .attr("style", "width: " + ratio + "%;");
 
             console.log("current set: \n", add_list.slice(0, current_animation_step + 1));
             current_animation_step += 1;

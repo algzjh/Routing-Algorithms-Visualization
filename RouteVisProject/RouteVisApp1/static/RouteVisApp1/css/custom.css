@@ -94,7 +94,16 @@ table td {
     margin-right: 0px;
 }
 
+#control-paly-pause{
+    margin-top: 20px;
+}
+
+#progress-control{
+    margin-top: 35px;
+}
+
 footer{
     height: 5%;
     padding-left: 20px;
 }
+

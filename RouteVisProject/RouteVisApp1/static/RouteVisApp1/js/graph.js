@@ -21,6 +21,7 @@ function onClickGenerateGraph(){
     let start_node = document.getElementById("start-node").value;
     let end_node = document.getElementById("end-node").value;
     let alg_name = document.getElementById("algorithm-selector").value;
+    let data_source_name = document.getElementById("data-source-selector").value;
     console.log("start_node: \n", start_node);
     console.log("end_node: \n", end_node);
     console.log("alg_name: \n", alg_name);
@@ -31,6 +32,7 @@ function onClickGenerateGraph(){
     formdata.append("start_node", start_node);
     formdata.append("end_node", end_node);
     formdata.append("alg_name", alg_name);
+    formdata.append("data_source_name", data_source_name);
     console.log("formdata: \n", formdata);
 
     $.ajaxSetup({
