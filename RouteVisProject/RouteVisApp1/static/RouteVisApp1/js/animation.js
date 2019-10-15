@@ -109,6 +109,11 @@ function onClickForward(){
             console.log("current set: \n", add_list.slice(0, current_animation_step + 1));
             current_animation_step += 1;
             console.log("current dist: \n", alg_result[current_animation_step]);
+        }else{
+            current_animation_step += 1;
+            if(current_animation_step == add_list.length + 2){
+                window.location.reload(false);
+            }
         }
     }
 }

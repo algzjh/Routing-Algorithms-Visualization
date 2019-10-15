@@ -52,9 +52,15 @@ function onClickGenerateGraph(){
                 graph_data = jsondata.graph_data;
                 console.log("graph_data: \n", graph_data);
 
+                var my_strength = -4000;
+                if(data_source_name==="1"){
+                    my_strength = -500
+                }
+                var circle_radius = 20;
+
                 var simulation = d3.forceSimulation()
                     .force("link", d3.forceLink().id(function(d) {return d.id;}))
-                    .force("charge", d3.forceManyBody().strength(-4000))
+                    .force("charge", d3.forceManyBody().strength(my_strength))
                     .force("center", d3.forceCenter(width/2, height/2));
 
                 // var link = svg.append("g")
@@ -93,7 +99,7 @@ function onClickGenerateGraph(){
                     .append("g");
 
                 var circles = node.append("circle")
-                    .attr("r", 20)
+                    .attr("r", circle_radius)
                     .attr("fill", "#69b3a2")
                     .attr("id", function(d) {return "circle-" + d.name;})
                     .call(d3.drag()
@@ -117,16 +123,19 @@ function onClickGenerateGraph(){
                     .links(graph_data.links);
 
                 function ticked() {
+                    node
+                        .attr("transform", function(d){
+                            // return "translate(" + d.x + "," + d.y + ")";
+                            return "translate(" + Math.max(circle_radius, Math.min(width - circle_radius, d.x)) + "," +
+                                                  Math.max(circle_radius, Math.min(height - circle_radius, d.y)) + ")";
+                        });
+
                     link
                         .attr("x1", function(d) { return d.source.x; })
                         .attr("y1", function(d) { return d.source.y; })
                         .attr("x2", function(d) { return d.target.x; })
                         .attr("y2", function(d) { return d.target.y; });
 
-                    node
-                        .attr("transform", function(d){
-                            return "translate(" + d.x + "," + d.y + ")";
-                        });
 
                     linkText
                         .attr("x", function(d){

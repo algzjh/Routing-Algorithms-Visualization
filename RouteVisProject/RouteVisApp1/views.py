@@ -4,6 +4,7 @@ from django.conf import settings
 import json
 import os
 from .dijkstra import getDijkstra
+from .randomgraph import createRandomGraph
 from random import randrange
 
 
@@ -31,7 +32,8 @@ def index(request):
                 data_source_name = request.POST["data_source_name"]
                 print("data_source_name: \n", data_source_name)
                 if data_source_name == "1":
-                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/graph1.json"
+                    createRandomGraph()
+                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/graph-random.json"
                 else:
                     temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
                 filename = os.path.join(settings.BASE_DIR, temp_path)
@@ -51,7 +53,7 @@ def index(request):
                 data_source_name = request.POST["data_source_name"]
                 print("data_source_name: \n", data_source_name)
                 if data_source_name == "1":
-                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/graph1.json"
+                    temp_path = "RouteVisApp1/static/RouteVisApp1/data/graph-random.json"
                 else:
                     temp_path = "RouteVisApp1/static/RouteVisApp1/data/example-graph.json"
                 filename = os.path.join(settings.BASE_DIR, temp_path)

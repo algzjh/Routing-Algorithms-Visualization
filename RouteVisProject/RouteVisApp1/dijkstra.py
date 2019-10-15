@@ -9,6 +9,14 @@ def read_json_file(filename):
         return json.load(file)
 
 
+def change2INF(dist):
+    d1 = deepcopy(dist)
+    for i in range(len(d1)):
+        if d1[i] == sys.maxsize:
+            d1[i] = "INF"
+    print(d1)
+    return d1
+
 def getDijkstra(graph_data, start_node, end_node):
     result = {}
     add_list = []
@@ -42,7 +50,7 @@ def getDijkstra(graph_data, start_node, end_node):
         for i in range(1, nodes_tot + 1):
             if vis[i] is False and dist[k] + cost_matrix[k][i] < dist[i]:
                 dist[i] = dist[k] + cost_matrix[k][i]
-        result[round] = deepcopy(dist)
+        result[round] = change2INF(dist)
     return result, add_list
 
 
