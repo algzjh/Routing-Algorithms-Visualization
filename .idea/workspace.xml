@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a54607d3-6eef-4b3c-afc0-8dd9f9f299d7" name="Default Changelist" comment="" />
+    <list default="true" id="a54607d3-6eef-4b3c-afc0-8dd9f9f299d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph-random.json" beforeDir="false" afterPath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph-random.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RouteVisProject/RouteVisProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/RouteVisProject/RouteVisProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RouteVisProject/RouteVisProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RouteVisProject/RouteVisProject/urls.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/templates/RouteVisApp1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+            <state relative-caret-position="352">
+              <caret line="164" column="29" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -32,19 +40,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="14" selection-end-line="111" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+            <state relative-caret-position="374">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -53,21 +52,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/randomgraph.py">
+        <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph-random.json">
+        <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1012" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisProject/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1671">
+              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -98,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/js/animation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1748">
-              <caret line="112" column="40" lean-forward="true" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="1904">
+              <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -107,17 +114,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/js/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+            <state relative-caret-position="205">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+            <state relative-caret-position="1139">
+              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -137,6 +144,7 @@
     <findStrings>
       <find>title</find>
       <find>id</find>
+      <find>csrf</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,34 +154,37 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/urls.py" />
-        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisProject/urls.py" />
-        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisProject/settings.py" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/example-graph.json" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/js/variable.js" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/css/custom.css" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph1.json" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph2.json" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/templates/randomgraph.py" />
-        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/views.py" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/js/animation.js" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/dijkstra.py" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/templates/RouteVisApp1/index.html" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/randomgraph.py" />
         <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/js/graph.js" />
+        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisProject/urls.py" />
+        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/views.py" />
+        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/models.py" />
+        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisApp1/admin.py" />
+        <option value="$PROJECT_DIR$/RouteVisProject/RouteVisProject/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="493" />
-    <option name="y" value="120" />
+    <option name="x" value="218" />
+    <option name="y" value="214" />
     <option name="width" value="2488" />
-    <option name="height" value="1115" />
+    <option name="height" value="1321" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,15 +232,6 @@
               <item name="Routing-Algorithms-Visualization" type="462c0819:PsiDirectoryNode" />
               <item name="RouteVisProject" type="462c0819:PsiDirectoryNode" />
               <item name="RouteVisApp1" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="RouteVisApp1" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Routing-Algorithms-Visualization" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Routing-Algorithms-Visualization" type="462c0819:PsiDirectoryNode" />
-              <item name="RouteVisProject" type="462c0819:PsiDirectoryNode" />
-              <item name="RouteVisApp1" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -250,7 +252,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,16 +350,19 @@
       <workItem from="1570847269120" duration="43721000" />
       <workItem from="1570979945302" duration="21531000" />
       <workItem from="1571122837910" duration="7942000" />
+      <workItem from="1571204073483" duration="257000" />
+      <workItem from="1571298333262" duration="8745000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104178000" />
+    <option name="totallyTimeSpent" value="113180000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="493" y="120" width="2488" height="1115" extended-state="0" />
+    <frame x="218" y="214" width="2488" height="1321" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12673753" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09934587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -372,7 +376,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.198" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27446103" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.20595534" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -404,16 +408,6 @@
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisProject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#639#671#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -466,13 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisProject/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/example-graph.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -487,17 +474,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/randomgraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph-random.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
+          <folding>
+            <element signature="e#13#671#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/js/animation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="112" column="40" lean-forward="true" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+        <state relative-caret-position="1904">
+          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="e#639#688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/dijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#22#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/templates/RouteVisApp1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        <state relative-caret-position="352">
+          <caret line="164" column="29" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -515,60 +559,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/js/graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+        <state relative-caret-position="205">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        <state relative-caret-position="374">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/randomgraph.py">
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph-random.json">
+    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1012" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/data/graph2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
-          <folding>
-            <element signature="e#13#671#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/dijkstra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#22#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RouteVisProject/RouteVisApp1/static/RouteVisApp1/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        <state relative-caret-position="-1671">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
         </state>
       </provider>
     </entry>

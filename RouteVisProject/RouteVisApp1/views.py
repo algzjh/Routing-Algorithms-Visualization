@@ -1,3 +1,13 @@
+"""
+视图 View 是 Django 的 MTV 架构模式的 V 部分，
+主要负责处理用户请求和生成相应的响应内容，
+然后在页面或其他类型文档中显示。
+也可以理解为视图是 MVC 架构里面的 C 部分（控制器）
+主要处理功能和业务上的逻辑
+数据除了接受用户请求和返回响应内容之外，
+还可以与模型（Model）实现数据交互（操作数据库）。
+要想将数据库的数据展现在网页上，需要由视图、模型和模板共同实现
+"""
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
